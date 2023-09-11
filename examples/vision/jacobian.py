@@ -39,7 +39,7 @@ torch.manual_seed(0)
 
 # Create a small model and load pre-trained parameters.
 model_ori = build_model(width=4, linear_size=32)
-model_ori.load_state_dict(torch.load('pretrained/cifar_2c2f.pth'))
+model_ori.load_state_dict(torch.load('pretrained/kw_mnist.pth'))
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model_ori = model_ori.to(device)
 print('Model:', model_ori)
